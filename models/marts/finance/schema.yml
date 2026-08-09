@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fct_daily_balances
+    description: "Daily running balances per account for financial reporting."
+    columns:
+      - name: running_balance
+        tests:
+          - not_null
+
+  - name: fct_transaction_summary
+    description: "Aggregated transaction metrics per customer and account."
+    columns:
+      - name: transaction_count
+        tests:
+          - not_null

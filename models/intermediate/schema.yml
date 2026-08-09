@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: int_transactions_enriched
+    columns:
+      - name: transaction_id
+        tests:
+          - not_null
+          - unique
+      - name: account_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_accounts')
+              field: account_id
+
+  - name: int_customer_balances
+    columns:
+      - name: running_balance
+        tests:
+          - not_null
