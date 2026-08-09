@@ -13,3 +13,4 @@ dbt-env/
 # Credentials
 profiles.yml
 *.json
+
