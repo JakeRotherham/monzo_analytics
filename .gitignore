@@ -1,5 +1,15 @@
-
+# dbt build artifacts
 target/
-dbt_packages/
 logs/
-.env
+dbt_packages/
+
+# Python virtual environments
+venv/
+dbt-env/
+
+# OS files
+.DS_Store
+
+# Credentials
+profiles.yml
+*.json
